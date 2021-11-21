@@ -29,7 +29,7 @@ int main()
 	string name;
 	int score;
 	vector<NameAndScore> data;
-	cout << "Enter a name and score (Enter 'No more' to exit):\n";
+	cout << "Enter a name and score (or 'No more' to exit):\n";
 	while(name != "No more" || name != "no more")
 	{
 		cout << "Enter a name and score: ";
@@ -40,7 +40,7 @@ int main()
 		{
 			if(data[i].name == name)
 			{
-				cout << "Name should be unique." << endl;
+				cout << "Error: '" + name + "' already exists." << endl;
 				continue;
 			}
 		}
@@ -50,7 +50,7 @@ int main()
 
 	for(int i = 0; i < data.size(); i++)
 	{
-		cout << "People and their scores as follows : " << endl;
+		cout << "People and their scores: " << endl;
 		cout << data[i].name << "," << data[i].score << endl;
 	}
 
